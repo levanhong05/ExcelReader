@@ -39,14 +39,14 @@ Public Class ExcelReader
         End If
 
         Dim excelApp As New Excel.Application
-        Dim desWorksheet As Excel.Worksheet
-        Dim desWworkbook As Excel.Workbook
+        Dim tarWorksheet As Excel.Worksheet
+        Dim tarWorkbook As Excel.Workbook
 
-        desWworkbook = excelApp.Workbooks.Open(txtDestinationPath.Text)
-        desWorksheet = desWworkbook.Worksheets("Feuil1")
+        tarWorkbook = excelApp.Workbooks.Open(txtDestinationPath.Text)
+        tarWorksheet = tarWorkbook.Worksheets("Feuil1")
 
-        desWworkbook.Save()
-        desWworkbook.Close()
+        tarWorkbook.Save()
+        tarWorkbook.Close()
         excelApp.Quit()
     End Sub
 
